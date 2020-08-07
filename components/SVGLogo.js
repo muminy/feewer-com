@@ -1,9 +1,14 @@
 import { CatIcon } from "constant/icons";
+import { siteConfig } from "site.config";
 
 export default function () {
   return (
     <div className="logoText flex aic">
-      <CatIcon size={28} color="#111" />
+      <CatIcon
+        className="logo_icon"
+        size={28}
+        color="#111"
+      />
     </div>
   );
 }

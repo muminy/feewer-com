@@ -1,23 +1,106 @@
-import { CatIcon } from "constant/icons";
+import {
+  CatIcon,
+  SettingIcon,
+  LogOutIcon,
+  MessageIcon,
+  BellIcon,
+  UserAddIcon,
+} from "constant/icons";
 import SVGLogo from "./SVGLogo";
+import Link from "next/link";
+
+export const ProfileActions = () => {
+  return (
+    <div className="profiles fw">
+      <div className="flex aic profile_actions_xx10">
+        <div className="is_online">
+          <img src="https://cdn.dribbble.com/users/180062/avatars/small/53db1cbb5a26108ac2181dc272f95b63.png?1498213923" />
+        </div>
+        <div className="user_info">
+          <div className="user_name">Erik Direk</div>
+          <div className="userName">@erikd</div>
+        </div>
+      </div>
+      <ul className="actionList">
+        <li className="list_items flex aic">
+          <MessageIcon size={20} color="#585858" />
+          <div className="info_dropdown">Mesajlar</div>
+        </li>
+        <li className="list_items flex aic">
+          <BellIcon size={20} color="#585858" />
+          <div className="info_dropdown">Bildirimler</div>
+        </li>
+        <li className="list_items flex aic">
+          <UserAddIcon size={20} color="#585858" />
+          <div className="info_dropdown">
+            Arkadaşlık istekleri
+          </div>
+        </li>
+      </ul>
+    </div>
+  );
+};
+export const Title4Sidebar = ({ title, info }) => {
+  return (
+    <header className="header_title">
+      <div className="t">{title}</div>
+      {info ?? <div className="i">{info}</div>}
+    </header>
+  );
+};
+
+export const OnlineUsers = () => {
+  return (
+    <div className="shouldFollow">
+      <div className="user_x flex center">
+        <div className="is_online">
+          <img src="https://cdn.dribbble.com/users/180062/avatars/small/53db1cbb5a26108ac2181dc272f95b63.png?1498213923" />
+        </div>
+        <div className="user_name_info fonti center">
+          <div className="user_ii">
+            <div className="un ucN">Fatih kadir akın</div>
+            <div className="unic">fkadev</div>
+          </div>
+        </div>
+      </div>
+      <div className="user_x flex center">
+        <div className="is_online">
+          <img src="https://static.dribbble.com/users/42578/avatars/normal/d0ac345ce3f79bf2c2e7e64527bbf342.jpg?1530900788" />
+        </div>
+        <div className="user_name_info fonti center">
+          <div className="user_ii">
+            <div className="un ucN">Emirhan Dereli</div>
+            <div className="unic">emrihan</div>
+          </div>
+        </div>
+      </div>
+      <div className="user_x flex center">
+        <div className="is_online">
+          <img src="https://cdn.dribbble.com/users/4189231/avatars/normal/beac5382e2629adcd8f3bdfa68994fe5.jpg?1570110577" />
+        </div>
+        <div className="user_name_info fonti center">
+          <div className="user_ii">
+            <div className="un ucN">Yusuf Eren</div>
+            <div className="unic">yusuf</div>
+          </div>
+        </div>
+      </div>
+      <Link href="/">
+        <a className="tumunu_gor_link">Tümünü gör</a>
+      </Link>
+    </div>
+  );
+};
 
 export default function () {
   return (
     <div className="sidebar">
-      <SVGLogo />
-      <div className="list">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width={24}
-          height={24}
-        >
-          <g>
-            <path fill="none" d="M0 0h24v24H0z" />
-            <path d="M19 19V9.799l-7-5.522-7 5.522V19h14zm2 1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.314a1 1 0 0 1 .38-.785l8-6.311a1 1 0 0 1 1.24 0l8 6.31a1 1 0 0 1 .38.786V20zM7 12h2a3 3 0 0 0 6 0h2a5 5 0 0 1-10 0z" />
-          </g>
-        </svg>
-      </div>
+      <ProfileActions />
+      <Title4Sidebar
+        title="Aktif arkadaşların"
+        info="18 arkadaşınız online"
+      />
+      <OnlineUsers />
     </div>
   );
 }

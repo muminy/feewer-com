@@ -508,13 +508,14 @@ address {
 }
 ol,
 ul {
-  padding-left: 2rem;
+  padding-left: 0rem;
+  list-style-type: none;
 }
 dl,
 ol,
 ul {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 ol ol,
 ol ul,
@@ -649,6 +650,11 @@ button {
   outline: none;
   border-width: 0px;
   background-color: #fff;
+  font-family: var(--fonts) !important;
+}
+input {
+  outline: none;
+  border: 1px solid #eee;
   font-family: var(--fonts) !important;
 }
 button:hover {

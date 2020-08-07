@@ -1,29 +1,72 @@
-@media (min-width: 980px) {
-  .main_content {
-    max-width: 1060px;
-    grid-template-columns: auto 1fr 380px;
-  }
-}
-@media (min-width: 1270px) {
-  .main_content {
-    max-width: 1270px;
-  }
-  .sidebar {
-    align-items: flex-start;
-    padding-right: 46px;
-  }
-}
 @media only screen and (max-width: 1300px) {
 }
 @media only screen and (max-width: 1100px) {
 }
 @media only screen and (max-width: 1000px) {
+  .main_area {
+    padding-bottom: 120px;
+  }
+  .responsive_menu {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 10px 0px;
+    z-index: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.103);
+  }
+  .hide_col {
+    display: none;
+  }
 }
 @media only screen and (max-width: 800px) {
 }
 
 @media only screen and (max-width: 700px) {
+  .menu_list {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 16px;
+  }
+  .menu_link {
+    margin-left: unset;
+    display: flex;
+    flex-direction: column;
+  }
+  .searc_area_x10 {
+    width: 100%;
+  }
+  .fw_menu_list {
+    width: 100% !important;
+  }
+  .searc_area_x10 > input {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 500px) {
+  .categori,
+  .blog_cards {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 18px;
+  }
+  .user_name_surname,
+  .replies,
+  .thread_info > time {
+    font-size: 10px;
+  }
+  .bconten_1j > p {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }

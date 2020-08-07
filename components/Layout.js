@@ -1,10 +1,14 @@
 import Head from "next/head";
 import { Container, MainContent } from "./Bootstrap";
 import Header from "./Header";
-import { siteConfig } from "constant/config";
+import { siteConfig } from "site.config";
 import Sidebar from "./Sidebar";
 
-export default function ({ title, children }) {
+export default function ({
+  title,
+  children,
+  disableContainer,
+}) {
   return (
     <React.Fragment>
       <Head>
@@ -13,7 +17,13 @@ export default function ({ title, children }) {
         </title>
       </Head>
       <Header />
-      <Container>{children}</Container>
+      {disableContainer ? (
+        children
+      ) : (
+        <Container className="main_area">
+          {children}
+        </Container>
+      )}
     </React.Fragment>
   );
 }
